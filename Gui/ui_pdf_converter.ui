@@ -399,9 +399,9 @@ QPushButton:pressed{
                <widget class="QFrame" name="frm_checkbox">
                 <property name="geometry">
                  <rect>
-                  <x>148</x>
+                  <x>105</x>
                   <y>130</y>
-                  <width>148</width>
+                  <width>241</width>
                   <height>37</height>
                  </rect>
                 </property>

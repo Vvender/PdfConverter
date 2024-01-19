@@ -197,13 +197,11 @@ class Ui_ConverterForm(object):
         self.btn_file_location.setText("")
         icon6 = QtGui.QIcon()
         icon6.addPixmap(QtGui.QPixmap(":/Icons/file-plus.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap(":/Icons/pdf_image.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_file_location.setIcon(icon6)
         self.btn_file_location.setIconSize(QtCore.QSize(100, 100))
         self.btn_file_location.setObjectName("btn_file_location")
         self.frm_checkbox = QtWidgets.QFrame(self.page_convert)
-        self.frm_checkbox.setGeometry(QtCore.QRect(148, 130, 148, 37))
+        self.frm_checkbox.setGeometry(QtCore.QRect(105, 130, 241, 37))
         self.frm_checkbox.setStyleSheet("background-color:transparent;\n"
                                         "color: #2586be;\n"
                                         "border-radius:15px;")
@@ -261,21 +259,21 @@ class Ui_ConverterForm(object):
         self.pages.addWidget(self.page_convert)
         self.page_info = QtWidgets.QWidget()
         self.page_info.setObjectName("page_info")
-        self.lbl_info = QtWidgets.QLabel(self.page_info)
-        self.lbl_info.setGeometry(QtCore.QRect(90, 90, 261, 71))
+        self.lbl_info_message = QtWidgets.QLabel(self.page_info)
+        self.lbl_info_message.setGeometry(QtCore.QRect(90, 90, 261, 71))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.lbl_info.setFont(font)
-        self.lbl_info.setStyleSheet("background-color:transparent;\n"
+        self.lbl_info_message.setFont(font)
+        self.lbl_info_message.setStyleSheet("background-color:transparent;\n"
                                             "color: #2586be;\n"
                                             "border-radius:15px;\n"
                                             "\n"
                                             "")
-        self.lbl_info.setAlignment(QtCore.Qt.AlignCenter)
-        self.lbl_info.setWordWrap(True)
-        self.lbl_info.setObjectName("lbl_info")
+        self.lbl_info_message.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbl_info_message.setWordWrap(True)
+        self.lbl_info_message.setObjectName("lbl_info_message")
         self.btn_info_return = QtWidgets.QPushButton(self.page_info)
         self.btn_info_return.setGeometry(QtCore.QRect(150, 170, 141, 51))
         font = QtGui.QFont()
@@ -329,5 +327,6 @@ class Ui_ConverterForm(object):
         self.cb_excel.setText(_translate("ConverterForm", "Excel"))
         self.cb_word.setText(_translate("ConverterForm", "Word"))
         self.btn_convert.setText(_translate("ConverterForm", "CONVERT"))
-        self.lbl_info.setText(_translate("ConverterForm", "Your files have been \nsuccesfully converted."))
+        self.lbl_info_message.setText(_translate("ConverterForm",
+                                                 "<html><head/><body><p align=\"center\">Your files have been </p><p align=\"center\">succesfully converted.<br/></p></body></html>"))
         self.btn_info_return.setText(_translate("ConverterForm", "RETURN"))
